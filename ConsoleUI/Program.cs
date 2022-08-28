@@ -10,7 +10,7 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
-            CarTest();
+           // CarTest();
             //UserTest();
             //RentalTest();
             //CustomerTest();
@@ -19,22 +19,22 @@ namespace ConsoleUI
 
         }
 
-        private static void GetCarDetails()
-        {
-            CarManager carManager = new CarManager(new EfCarDal());
-            var result = carManager.GetCarDetails();
-            if (result.Success == true)
-            {
-                foreach (var car in result.Data)
-                {
-                    Console.WriteLine(car.CarId + " / " + car.BrandName + " / " + car.ColorName);
-                }
-            }
-            else
-            {
-                Console.WriteLine(result.Message);
-            }
-        }
+        //private static void GetCarDetails()
+        //{
+        //    CarManager carManager = new CarManager(new EfCarDal(),new BrandManager(new EfBrandDal()));
+        //    var result = carManager.GetCarDetails();
+        //    if (result.Success == true)
+        //    {
+        //        foreach (var car in result.Data)
+        //        {
+        //            Console.WriteLine(car.CarId + " / " + car.BrandName + " / " + car.ColorName);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine(result.Message);
+        //    }
+        //}
 
         private static void CustomerTest()
         {
@@ -47,13 +47,13 @@ namespace ConsoleUI
                 Console.WriteLine(customer.CustomerId + " / " + customer.UserId + " / " + customer.CompanyName);
             }
         }
-        private static void RentalTest()
-        {
-            RentalManager rentalManager = new RentalManager(new EfRentalDal());
-            var result = rentalManager.Add(new Rental { CarId = 3, CustomerId = 2, RentDate = new DateTime(2022, 08, 24) });
-            Console.WriteLine(result.Success);
-            Console.WriteLine(result.Message);
-        }
+        //private static void RentalTest()
+        //{
+        //    RentalManager rentalManager = new RentalManager(new EfRentalDal());
+        //    var result = rentalManager.Add(new Rental { CarId = 3, CustomerId = 2, RentDate = new DateTime(2022, 08, 24) });
+        //    Console.WriteLine(result.Success);
+        //    Console.WriteLine(result.Message);
+        //}
         private static void UserTest()
         {
 
@@ -66,23 +66,23 @@ namespace ConsoleUI
                 Console.WriteLine(user.UserId + " / " + user.FirstName + " / " + user.LastName + " / " + user.Email + " / " + user.Password);
             }
         }
-        private static void CarTest()
-        {
-            CarManager carManager = new CarManager(new EfCarDal());
+        //private static void CarTest()
+        //{
+        //    CarManager carManager = new CarManager(new EfCarDal(), new BrandManager(new EfBrandDal())); 
+            
+        //    var result = carManager.GetAll();
 
-            var result = carManager.GetAll();
-
-            if (result.Success)
-            {
-                foreach (var car in result.Data)
-                {
-                    Console.WriteLine(car.Id + " / " + car.BrandId + " / " + car.ModelYear + " / " + car.DailyPrice + " / " + car.Descriptions);
-                }
-            }
-            else
-            {
-                Console.WriteLine(result.Message);
-            }
-        }
+        //    if (result.Success)
+        //    {
+        //        foreach (var car in result.Data)
+        //        {
+        //            Console.WriteLine(car.Id + " / " + car.BrandId + " / " + car.ModelYear + " / " + car.DailyPrice + " / " + car.Descriptions);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine(result.Message);
+        //    }
+        //}
     }
 }

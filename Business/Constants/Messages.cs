@@ -18,10 +18,8 @@ namespace Business.Constants
         public static string CarAlreadyRented = "The car rental process failed, the selected car was rented";
         public static string RentalSuccesful = "The Car rental process is successful";
         public static string CouldNotCarAdded = "Could Not Car Added ";
-
-
-
-
-
+         public static string CarCountOfCategoryError = " Category Count be max 10 ";
+        public static string CarDescriptionsAlreadyExist = "Description already exist";
+        public static string BrandLimitExceded="Brand Limit exceded";
     }
 }

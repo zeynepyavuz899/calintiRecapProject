@@ -22,6 +22,7 @@ namespace Business.Concrete
 
         public IResult Add(Brand brand)
         {
+         
             _brandDal.Add(brand);
             return new SuccessResult();
         }
@@ -46,6 +47,7 @@ namespace Business.Concrete
         {
             return new SuccessDataResult<Brand>(_brandDal.Get(b => b.BrandId == brandId));
         }
+
 
        
     }

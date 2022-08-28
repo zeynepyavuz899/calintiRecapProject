@@ -13,9 +13,11 @@ namespace Business.ValidationRules.FluentValidation
         public CarValidator()
         {
             RuleFor(c => c.Descriptions).MinimumLength(2);
+            
             RuleFor(c => c.DailyPrice).GreaterThan(0);
             RuleFor(c => c.DailyPrice).GreaterThanOrEqualTo(100).When(c => c.BrandId == 2);
             RuleFor(c => c.Descriptions).Must(StartWithA);
+            
         }
 
         private bool StartWithA(string arg)
