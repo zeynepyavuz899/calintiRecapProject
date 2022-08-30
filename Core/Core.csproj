@@ -10,7 +10,14 @@
     <PackageReference Include="Autofac.Extras.DynamicProxy" Version="6.0.1" />
     <PackageReference Include="Castle.Core" Version="5.1.0" />
     <PackageReference Include="FluentValidation" Version="11.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="CrossCuttingConcerns\Authorization\" />
+    <Folder Include="Utilities\Security\Encryption\" />
+    <Folder Include="Utilities\Security\JWT\" />
   </ItemGroup>
 
 </Project>
