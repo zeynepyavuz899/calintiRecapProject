@@ -63,7 +63,7 @@ namespace ConsoleUI
             var result = userManager.GetAll();
             foreach (var user in result.Data)
             {
-                Console.WriteLine(user.UserId + " / " + user.FirstName + " / " + user.LastName + " / " + user.Email + " / " + user.Password);
+                Console.WriteLine(user.UserId + " / " + user.FirstName + " / " + user.LastName + " / " + user.Email + " / " );
             }
         }
         //private static void CarTest()
